@@ -256,7 +256,7 @@ var listaDeRemedios = [
     {
         nome: "Nitronicerina",
         indicaçoes: "Este medicamento é indicado para o tratamento de hipertensão perioperatória para controle de insuficiência cardíaca congestiva, no ajuste do infarto agudo do miocárdio, para tratamento de angina pectoris.",
-        diluiçao:"Deve ser diluído em glicose (5%) ou cloreto de sódio (0,9%) antes da realização da infusão. O equipo usado para infusão pode influenciar na quantidade de nitroglicerina administrada ao paciente e requer atenção para a resposta clínica.",
+        diluiçao: "Deve ser diluído em glicose (5%) ou cloreto de sódio (0,9%) antes da realização da infusão. O equipo usado para infusão pode influenciar na quantidade de nitroglicerina administrada ao paciente e requer atenção para a resposta clínica.",
         vias: "Nitroglicerina é destinado apenas para uso intravenoso. Não administrar por injeção intravenosa direta.",
         imcompatibilidade: "Alteplase: Nitroglicerina pode reduzir sua concentração sérica.Diazóxido: Pode aumentar o efeito hipotensor dos anti-hipertensivos. Metilfenidato: Pode reduzir o efeito hipotensor dos anti-hipertensivos. Inibidores de Fosfodiesterase-5: Podem intensificar o efeito vasodilatador dos nitratos. Análogos da Prostaciclina: Podem aumentar o efeito hipotensor dos anti-hipertensivos. Rituximabe: Anti-hipertensivos podem intensificar seu efeito hipotensor. Rosiglitazona: Nitratos podem aumentar o risco de isquemia miocárdica. Álcool: Pode intensificar o efeito hipotensor da nitroglicerina. Fitoterápicos: Alguns fitoterápicos com efeito hipotensor (ex. gengibre, ginseng, cola, alcaçuz, quinino) podem potencializar o efeito dos anti-hipertensivos.",
         reaçoes: "Vertigem, cefaleia, sincope, hipotensão, hipertensão rebote",
@@ -281,4 +281,10 @@ var listaDeRemedios = [
     },
 ];
 
-montarTabela()
+
+document.getElementById("openModal").addEventListener("click", function() {
+    document.getElementById("modal").style.display = "flex";
+});
+document.getElementById("closeModal").addEventListener("click", function() {
+    document.getElementById("modal").style.display = "none";
+});
