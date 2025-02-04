@@ -1,18 +1,46 @@
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modal Simples</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
     <button id="openModal"> Nome remedio</button>
     <div id="modal" class="modal">
         <div class="modal-content">
-            <p>Este é um modal simples.</p>
-            <button id="closeModal">Fechar</button>
+            <div class="conteudoModal">
+                <h1>Nome Remedio</h1>
+                <button id="toggleCollapse">Indicações</button>
+                <div id="collapse" class="collapse">
+                    <p>Este é um conteúdo da indicação.</p>
+                </div>
+
+                <button id="toggleCollapse1">Diluição</button>
+                <div id="collapse1" class="collapse">
+                    <p>Este é um conteúdo da indicação.</p>
+                </div>
+
+                <button id="toggleCollapse2">Vias ADM</button>
+                <div id="collapse2" class="collapse">
+                    <p>Este é um conteúdo da indicação.</p>
+                </div>
+                <button id="toggleCollapse3">Imcompatibilidade</button>
+                <div id="collapse3" class="collapse">
+                    <p>Este é um conteúdo da indicação.</p>
+                </div>
+                <button id="toggleCollapse4">Reações adversas</button>
+                <div id="collapse4" class="collapse">
+                    <p>Este é um conteúdo da indicação.</p>
+                </div>
+                <button id="closeModal">Fechar</button>
+            </div>
+
         </div>
     </div>
     <script src="index.js"></script>
 </body>
+
 </html>
