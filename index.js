@@ -186,32 +186,98 @@ var listaDeRemedios = [
         indicaçoes: "HIDANTAL® é destinado ao tratamento de: - crises convulsivas durante ou após neurocirurgia; - crises convulsivas, crises tônico-clônicas generalizadas e crise parcial complexa (lobo psicomotor e temporal); - estado de mal epiléptico.",
         diluiçao: ": a soluções de cloreto de sódio 0,9% deve ser a escolha no caso da necessidade de diluição do medicamento",
         vias: "Intramuscular / intravenoso",
-        imcompatibilidade: "",
-        reaçoes: "",
+        imcompatibilidade: "HIDANTAL é contraindicado a pacientes que tenham apresentado reações intensas ao medicamento ou a outras hidantoínas e em pacientes que apresentam síndrome",
+        reaçoes: "NISTAGMO: ( MOVIMENTAÇAO INVOLUNTARIO) VERTIGEM, PRURIDO, PARESTESIA (COCEIRA), CEFALEIA",
     },
+
     {
-        nome: "",
-        indicaçoes: "",
-        diluiçao: "",
-        vias: "",
-        imcompatibilidade: "",
-        reaçoes: "",
+        nome: "FETANIL (CITRATO DE FETANILA)",
+        indicaçoes: "O citrato de fentanila solução injetável é indicado: para analgesia de curta duração durante o período anestésico (pré-medicação, indução e manutenção) ou quando necessário no período pós-operatório imediato (sala de recuperação). - para uso como componente analgésico da anestesia geral e suplemento da anestesia regional,para administração conjunta com neuroléptico na pré-medicação, na indução e como componente de manutenção em anestesia geral e regional,para uso como agente anestésico único com oxigênio em determinados pacientes de alto risco, como os submetidos a cirurgia cardíaca ou certos procedimentos neurológicos e ortopédicos difíceis,para administração epidural no controle da dor pós-operatória, operação cesariana ou outra cirurgia abdominal.",
+        diluiçao: "Essa quantidade de 2 mL deve ser diluída em 8 mL de solução salina a 0,9% resultando em uma concentração final de 10 mcg/Ml.",
+        vias: "USO EPIDURAL, INTRAVENOSO E INTRAMUSCULAR",
+        imcompatibilidade: "é contraindicada para o tratamento da dor aguda ou da dor pós-operatória, pois não permite ajuste de dose durante uso em curto período e porque pode ocorrer hipoventilação grave ou de risco à vida.",
+        reaçoes: "Depressão respiratória, Apneia, Rigidez, Bradicardia.",
     },
+
     {
-        nome: "",
-        indicaçoes: "",
-        diluiçao: "",
-        vias: "",
-        imcompatibilidade: "",
-        reaçoes: "",
+        nome: "Gadernal",
+        indicaçoes: "o Gardenal e um barbitirico com propriedades anticulvacionante, devido a sua capacidade de elevar a limiar de convulsões, este e um medicamento que age no sistema nervoso central, utilizado para prevenir o aparecimento dee convulsões em indivíduos com epilepsia ou crises convulsivas de outras origem.",
+        diluiçao: "oral",
+        vias: "As gotas devem ser diluídas em água.",
+        imcompatibilidade: "porfiria, hipersensibilidade conhecida aos barbitúricos, insuficiência respiratória severa; -Em mulheres grávidas, mulheres e crianças do sexo feminino com potencial para engravidar (vide Advertências e Precauçõe) insuficiência hepática e renal graves, uso de saquinavir, daclatasvir, dasabuvir, paritaprevir, ombitasvir, ledipasvir e sofosbuvir: vide Interações Medicamentosas",
+        reaçoes: "DISTURBIOS PSIQUIATRICIOS, DISTURBIO NO SISTEMA NERVOSO, DISTURBIO GASTRINSTESTINAIS, DISTURBIO HEPATOBILIARES, DISTURBIO NA PELE DE TECIDO SUBCUTANIO",
     },
+
     {
-        nome: "",
-        indicaçoes: "",
-        diluiçao: "",
-        vias: "",
-        imcompatibilidade: "",
-        reaçoes: "",
+        nome: " Haldol (Haloperidol)",
+        indicaçoes: "Como agente antipsicótico: em delírios e alucinações na esquizofrenia aguda e crônica. Na confusão mental aguda. Como um agente antiagitação psicomotor: mania, demência. Agitação e agressividade no idoso. Distúrbios graves do comportamento e nas psicoses infantis acompanhadas de excitação psicomotora. Movimentos coreiformes. Tiques. Estados impulsivos e agressivos. Síndrome de Tourette. Como antiemético: náuseas e vômitos incoercíveis de várias origens, quando outras terapêuticas mais específicas não foram suficientemente eficazes.",
+        diluiçao: "_",
+        vias: "oral e intramuscular ",
+        imcompatibilidade: "Alprazolam ou buspirona ,Fluoxetina, fluvoxamina, nefazodona, paroxetina, sertralina, venlafaxina Carbamazepina, Itraconazol , Ritonavir ,Clorpromazina ou prometazina.",
+        reaçoes: "Reações muito comum : Distúrbios do sistema nervoso: distúrbios extrapiramidais; hipercinesia (movimentação excessiva e atípica do corpo e membros) Reaçoes comums: Distúrbios do sistema nervoso: tremor, hipertonia (rigidez muscular), distonia, sonolência, bradicinesia (movimentos lentos). Distúrbios oftalmológicos: distúrbios visuais. Distúrbios gastrintestinais: constipação, boca seca, hipersecreção salivar. Reações muito rara: Distúrbios do sistema sanguíneo e linfático: agranulocitose, pancitopenia, trombocitopenia, leucopenia e neutropenia. Distúrbios do sistema imunológico: reação anafilática, hipersensibilidade. Distúrbios endócrinos: secreção inapropriada do hormônio antidiurético. Distúrbios do metabolismo e nutricionais: hipoglicemia. Distúrbios psiquiátricos: transtorno psicótico, agitação, estado confusional, depressão e insônia. Distúrbios do sistema nervoso: convulsão e cefaleia. Distúrbios cardíacos: Torsades de Pointes, fibrilação ventricular, taquicardia ventricular, extrassístole. Distúrbios do mediastino, respiratório e torácico: broncoespasmo, laringoespasmo, edema de laringe, dispneia. Distúrbios gastrintestinais: vômito, náusea. Distúrbios hepatobiliares: insuficiência hepática aguda, hepatite, colestase, icterícia, anormalidade no teste da função hepática",
+    },
+
+    {
+        nome: "Hidrocortisona",
+        indicaçoes: "Insuficiência adrenal aguda (crise adrenal).Choque anafilático. Reações alérgicas severas (ex.: angioedema).Asma grave.Doenças reumatológicas (ex.: artrite reumatoide).Doenças dermatológicas (ex.: dermatite atópica severa).Condições oftalmológicas (ex.: inflamação intraocular).Transplantes de órgãos (para evitar rejeição).",
+        diluiçao: "A hidrocortisona é geralmente diluída em solução salina 0,9% ou solução de glicose 5%, dependendo do uso clínico. Exemplo: Para administração intravenosa (IV), o pó liofilizado pode ser reconstituído com água para injeção e depois diluído para infusão.",
+        vias: "Intravenosa (IV): Para tratamento de emergências, como choque anafilático ou insuficiência adrenal aguda. Intramuscular (IM): Quando a via IV não é possível. Tópica: Para alívio de inflamação e coceira na pele. Oral: Em formulações específicas para controle de condições crônicas (ex.: insuficiência adrenal). Intra-articular ou intralesional: Em casos específicos de artrite ou condições inflamatórias localizadas.",
+        imcompatibilidade: "A hidrocortisona não deve ser misturada com outros medicamentos na mesma solução ou via, pois pode haver incompatibilidade física ou química, como precipitação.Incompatibilidades comuns incluem: Heparina: Pode formar precipitado. Antibióticos (como aminoglicosídeos): Incompatibilidades específicas podem ocorrer.Soluções alcalinas (ex.: bicarbonato de sódio): Podem causar degradação da hidrocortisona.",
+        reaçoes: "Comuns:Hiperglicemia.Retenção de sódio e água (edema).Hipocalemia (queda do potássio).Supressão do eixo HPA (hipotálamo-pituitária-adrenal). Graves:Insuficiência adrenal (com retirada abrupta após uso prolongado).Infecções oportunistas (imunossupressão).Úlcera gástrica ou hemorragia gastrointestinal.Osteoporose (uso crônico).Miopatia.Alterações psiquiátricas (ex.: insônia, depressão, psicose).",
+    },
+
+    {
+        nome: "INSULINA NPH: NOVOLIN°N",
+        indicaçoes: "Novolin® N é indicado para o tratamento de diabetes mellitus.",
+        diluiçao: "é necessário rolar o frasco de insulina 20 vezes entre as mãos para homogeneizar a solução.",
+        vias: "Subcutânea",
+        imcompatibilidade: "Hipersensibilidade à substância ativa ou a qualquer um dos excipientes (vide “Composição”)",
+        reaçoes: "Distúrbios do sistema imune.Distúrbios do metabolismo e nutrição.Distúrbios do sistema nervoso.Distúrbios da visão.Distúrbios da pele e do tecido subcutâneo.Distúrbios gerais e condições do local de aplicação.",
+    },
+
+    {
+        nome: "Morfina",
+        indicaçoes: "Tratamento de dor moderada a intensa (aguda ou crônica). Uso em dor oncológica, pós-operatória ou dor associada a infarto do miocárdio.",
+        diluiçao: "Diluentes: Soro fisiológico (NaCl 0,9%) ou água destilada. Exemplo: Para 1 mg/mL em 10 mL, dilua 1 mL de morfina (10 mg/mL) com 9 mL de diluente.",
+        vias: "Intravenosa (IV), intramuscular (IM), subcutânea (SC) ou via epidural/intratecal (uso especializado). Ajustar a velocidade de infusão conforme a prescrição.",
+        imcompatibilidade: "Não misturar com fentanil, heparina, fenitoína, aminofilina e soluções alcalinas (ex.: bicarbonato de sódio). Observar alterações físicas (turvação, precipitação)",
+        reaçoes: "Comuns: Náusea, vômito, constipação, sedação, prurido. Graves: Depressão respiratória, hipotensão, dependência física/psicológica",
+    },
+
+    {
+        nome: "Naloxona",
+        indicaçoes: "O cloridrato de naloxona é um antagonista de opioide indicado para o tratamento de emergência de superdose ou intoxicação aguda por opioide, suspeita ou comprovada, que se manifesta por depressão respiratória e/ou depressão do sistema nervoso central. Este medicamento pode ser usado para a reversão completa ou parcial dos efeitos adversos de opioides, especialmente depressão respiratória, causados com seu uso terapêutico e para o diagnóstico de superdose aguda, por opioides. São exemplos de opioides: morfina, metadona, nalbufina, tramadol, buprenorfina e sufentanila. O cloridrato de naloxona também é utilizado para a reversão da depressão respiratória em neonatos de mães que receberam opioides durante o trabalho de parto.",
+        diluiçao: "A adição de 2 mg (5 ampolas) de cloridrato de naloxona em 500 mL de cloreto de sódio 0,9% ou solução de glicose 5%. Fornece a concentração de 0,004mg. Superdose: Não é recomendado diluição.",
+        vias: "O cloridrato de naloxona pode ser administrado por via intravenosa, intramuscular ou subcutânea. Em situações de emergência a medida inicial principal é a assistência ventilatória contínua ao paciente, seja por máscara com reservatório ou intubação orotraqueal e ventilação mecânica",
+        imcompatibilidade: "Interações: Naloxona pode interagir com analgésicos opioides, como a nalbufina. Metoexital: Pode bloquear sintomas de abstinência induzidos por naloxona.",
+        reaçoes: "Precaução: Usar com cautela em pacientes com doenças cardíacas ou efeitos cardiovasculares adversos. Buprenorfina: Requer doses altas de naloxona para reversão devido à longa duração da buprenorfina. Infusões: Não devem ser misturadas com certas substâncias ou soluções alcalinas.",
+    },
+
+    {
+        nome: "Nitronicerina",
+        indicaçoes: "Este medicamento é indicado para o tratamento de hipertensão perioperatória para controle de insuficiência cardíaca congestiva, no ajuste do infarto agudo do miocárdio, para tratamento de angina pectoris.",
+        diluiçao:"Deve ser diluído em glicose (5%) ou cloreto de sódio (0,9%) antes da realização da infusão. O equipo usado para infusão pode influenciar na quantidade de nitroglicerina administrada ao paciente e requer atenção para a resposta clínica.",
+        vias: "Nitroglicerina é destinado apenas para uso intravenoso. Não administrar por injeção intravenosa direta.",
+        imcompatibilidade: "Alteplase: Nitroglicerina pode reduzir sua concentração sérica.Diazóxido: Pode aumentar o efeito hipotensor dos anti-hipertensivos. Metilfenidato: Pode reduzir o efeito hipotensor dos anti-hipertensivos. Inibidores de Fosfodiesterase-5: Podem intensificar o efeito vasodilatador dos nitratos. Análogos da Prostaciclina: Podem aumentar o efeito hipotensor dos anti-hipertensivos. Rituximabe: Anti-hipertensivos podem intensificar seu efeito hipotensor. Rosiglitazona: Nitratos podem aumentar o risco de isquemia miocárdica. Álcool: Pode intensificar o efeito hipotensor da nitroglicerina. Fitoterápicos: Alguns fitoterápicos com efeito hipotensor (ex. gengibre, ginseng, cola, alcaçuz, quinino) podem potencializar o efeito dos anti-hipertensivos.",
+        reaçoes: "Vertigem, cefaleia, sincope, hipotensão, hipertensão rebote",
+    },
+
+    {
+        nome: "Profenid",
+        indicaçoes: "Dores Pós-Operatórias 2. Dores Musculoesqueléticas Agudas,3. Crises de Dor em Doenças Crônicas (artrite reumatoide, osteoartrite),4. Dores de Origem Inflamatória (bursite, tendinite)",
+        diluiçao: "É importante verificar a compatibilidade do Profenid EV com a solução intravenosa utilizada. Normalmente, é compatível com soluções salinas (NaCl 0.9%) e ringer lactato, mas a compatibilidade deve ser confirmada antes da administração. Solução de Ringer Lactato: Outra opção frequentemente utilizada, especialmente em pacientes que necessitam de reposição de eletrólitos",
+        vias: "Via Intramuscular (IM): Administrado no quadrante superior externo do glúteo ou no músculo vasto lateral da coxa. Dose usual para adultos: 100 mg a 200 mg por dia, conforme prescrição médica. Incompatibilidade medicamentosa: Hipersensibilidade ao cetoprofeno ou a outros AINEs. Histórico de úlcera péptica ativa ou sangramento gastrointestinal. Insuficiência renal, hepática ou cardíaca grave.",
+        imcompatibilidade: "Outros AINEs: Evitar a mistura com outros anti-inflamatórios não esteroidais, pois pode aumentar o risco de efeitos adversos, como úlceras gastrointestinais e sangramentos. Anticoagulantes: A combinação com anticoagulantes como heparina ou varfarina pode aumentar o risco de sangramentos. Diuréticos: A combinação pode diminuir a eficácia dos diuréticos e aumentar o risco de neurotoxicidade. Anti-hipertensivos: Pode reduzir a eficácia de medicamentos anti-hipertensivos, como inibidores da ECA e betabloqueadores.",
+        reaçoes: "Náuseas e vômitos. Dor abdominal e diarreia. Reações no local da injeção (dor, vermelhidão, inchaço). Náuseas e vômitos. Reações alérgicas (erupções cutâneas). Alterações na função renal. Sangramento gastrointestinal.",
+    },
+
+    {
+        nome: "Tazocin",
+        indicaçoes: "Tazocin® (piperacilina sódica e tazobactam sódico) é indicado para o tratamento das seguintes infecções bacterianas sistêmicas e/ou locais causadas por microrganismos Gram-positivos e Gram-negativos aeróbios e anaeróbios sensíveis à piperacilina/tazobactam ou à piperacilina: Pacientes adultos 1. Infecções do trato respiratório inferior. 2. Infecções do trato urinário. 3. Infecções intra-abdominais. 4. Infecções da pele e tecidos moles. 5. Sepse bacteriana. 6. Infecções ginecológicas, incluindo endometrite pós-parto e doença inflamatória pélvica (DIP). 7. Infecções neutropênicas febris. É recomendado o tratamento em associação a um aminoglicosídeo. 8. Infecções osteoarticulares. 9. Infecções polimicrobianas (microrganismos Gram-positivos/Gram-negativos aeróbios e anaeróbios). Crianças (acima de 2 anos de idade) 1. Infecções neutropênicas febris em pacientes pediátricos. É recomendado o tratamento em associação a um aminoglicosídeo. 2. Infecções intra-abdominais",
+        diluiçao: "Cada frasco-ampola de Tazocin® 2,25 g deverá ser reconstituído com 10 mL de um dos diluentes acima. Após a reconstituição, espera-se um volume final aproximado de 11,5 mL de solução dentro do frasco. Cada frasco-ampola de Tazocin® 4,5 g deverá ser reconstituído com 20 mL de um dos diluentes acima.",
+        vias: "EXCLUSIVAMENTE PARA VIA INTRAVENOSA",
+        imcompatibilidade: "Devido à instabilidade química, Tazocin® não deve ser usado em soluções que contenham somente bicarbonato de sódio. Sempre que Tazocin® for utilizado concomitantemente a outro antibiótico (p.ex., aminoglicosídeos, que não amicacina e gentamicina nas especificações recomendadas), os medicamentos devem ser administrados separadamente. A mistura de Tazocin® com um aminoglicosídeo in vitro pode inativar consideravelmente o aminoglicosídeo.",
+        reaçoes: "A suspeita de efeitos indesejáveis é baseada nos estudos clínicos e/ou taxas de relatos espontâneos de póscomercialização. Reações Adversas por Sistema de Classe de Órgãos (SOC) e categorias de frequência do Conselho das Organizações Internacionais de Ciências Médicas (CIOMS) listadas em ordem decrescente de gravidade médica ou importância clínica dentro de cada categoria de frequência e SOC",
     },
 ];
 
