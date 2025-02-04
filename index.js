@@ -306,7 +306,7 @@ document.getElementById("toggleCollapse1").addEventListener("click", function() 
 });
 
 document.getElementById("toggleCollapse2").addEventListener("click", function() {
-    var collapse = document.getElementById("collapse");
+    var collapse = document.getElementById("collapse2");
     if (collapse.style.display === "none" || collapse.style.display === "") {
         collapse.style.display = "block";
     } else {
@@ -329,3 +329,39 @@ document.getElementById("toggleCollapse4").addEventListener("click", function() 
         collapse.style.display = "none";
     }
 });
+
+function dadosRemedios(){
+    var conteudoModalHTML = document.getElementById("conteudoModal")
+    listaDeRemedios.forEach(remedio =>{
+        conteudoModalHTML.innerHTML = `
+         <h1>${remedio.nome}</h1>
+                <button id="toggleCollapse">Indicações</button>
+                <div id="collapse" class="collapse">
+                    <p>${remedio.indicaçoes}</p>
+                </div>
+
+                <button id="toggleCollapse1">Diluição</button>
+                <div id="collapse1" class="collapse">
+                    <p>${remedio.diluiçao}</p>
+                </div>
+
+                <button id="toggleCollapse2">Vias ADM</button>
+                <div id="collapse2" class="collapse">
+                    <p>${remedio.vias}</p>
+                </div>
+                <button id="toggleCollapse3">Imcompatibilidade</button>
+                <div id="collapse3" class="collapse">
+                    <p>${remedio.imcompatibilidade}</p>
+                </div>
+                <button id="toggleCollapse4">Reações adversas</button>
+                <div id="collapse4" class="collapse">
+                    <p>${remedio.reaçoes}</p>
+                </div>
+                <button id="closeModal">Fechar</button>
+            </div>
+    `
+
+    })
+    
+}
+dadosRemedios()
