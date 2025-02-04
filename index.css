@@ -1,6 +1,10 @@
 p{
     color:aqua;
+<<<<<<< HEAD
 }
 header{
     color: aqua;
+=======
+    display: block;
+>>>>>>> 81b542cf44218d73525431c816681c89f4bf9480
 }
