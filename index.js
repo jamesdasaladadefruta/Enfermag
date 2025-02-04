@@ -288,3 +288,44 @@ document.getElementById("openModal").addEventListener("click", function() {
 document.getElementById("closeModal").addEventListener("click", function() {
     document.getElementById("modal").style.display = "none";
 });
+document.getElementById("toggleCollapse").addEventListener("click", function() {
+    var collapse = document.getElementById("collapse");
+    if (collapse.style.display === "none" || collapse.style.display === "") {
+        collapse.style.display = "block";
+    } else {
+        collapse.style.display = "none";
+    }
+});
+document.getElementById("toggleCollapse1").addEventListener("click", function() {
+    var collapse = document.getElementById("collapse1");
+    if (collapse.style.display === "none" || collapse.style.display === "") {
+        collapse.style.display = "block";
+    } else {
+        collapse.style.display = "none";
+    }
+});
+
+document.getElementById("toggleCollapse2").addEventListener("click", function() {
+    var collapse = document.getElementById("collapse");
+    if (collapse.style.display === "none" || collapse.style.display === "") {
+        collapse.style.display = "block";
+    } else {
+        collapse.style.display = "none";
+    }
+});
+document.getElementById("toggleCollapse3").addEventListener("click", function() {
+    var collapse = document.getElementById("collapse3");
+    if (collapse.style.display === "none" || collapse.style.display === "") {
+        collapse.style.display = "block";
+    } else {
+        collapse.style.display = "none";
+    }
+});
+document.getElementById("toggleCollapse4").addEventListener("click", function() {
+    var collapse = document.getElementById("collapse4");
+    if (collapse.style.display === "none" || collapse.style.display === "") {
+        collapse.style.display = "block";
+    } else {
+        collapse.style.display = "none";
+    }
+});
