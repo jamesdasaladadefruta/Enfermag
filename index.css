@@ -9,10 +9,24 @@
     justify-content: center;
     align-items: center;
 }
-
+.conteudoModal{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 .modal-content {
     background: white;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.collapse {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background: #f1f1f1;
+    border: 1px solid #ccc;
+}
+#closeModal{
+    align-items: center;
 }
