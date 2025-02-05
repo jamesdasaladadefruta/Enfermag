@@ -284,40 +284,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-document.getElementById("toggleCollapse2").addEventListener("click", function () {
-
-document.getElementById("toggleCollapse2").addEventListener("click", function() {
-
-    var collapse = document.getElementById("collapse2");
-    if (collapse.style.display === "none" || collapse.style.display === "") {
-        collapse.style.display = "block";
-    } else {
-        collapse.style.display = "none";
-    }
-});
-document.getElementById("toggleCollapse3").addEventListener("click", function () {
-    var collapse = document.getElementById("collapse3");
-    if (collapse.style.display === "none" || collapse.style.display === "") {
-        collapse.style.display = "block";
-    } else {
-        collapse.style.display = "none";
-    }
-});
-document.getElementById("toggleCollapse4").addEventListener("click", function () {
-    var collapse = document.getElementById("collapse4");
-    if (collapse.style.display === "none" || collapse.style.display === "") {
-        collapse.style.display = "block";
-    } else {
-        collapse.style.display = "none";
-    }
-});
-
-
-function tabelaRemedios() {
-    var container = document.getElementById("conteudoRemedios"); // Div onde os botões serão inseridos
-    document.innerHTML = ""; // Limpa antes de adicionar os novos botões
-
-
 function tabelaRemedios(lista = listaDeRemedios) {
     var container = document.getElementById("conteudoRemedios"); // Div onde os botões serão inseridos
     container.innerHTML = "" // Limpa antes de adicionar os novos botões
@@ -399,3 +365,4 @@ const listaTemporaria= listaDeRemedios.filter(remedio=>remedio.nome.toLowerCase(
 tabelaRemedios(listaTemporaria)
 
 }
+
