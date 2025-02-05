@@ -283,7 +283,7 @@ document.addEventListener("DOMContentLoaded", function () {
     tabelaRemedios(); // Inicializa os botões de remédios
 });
 
-<<<<<<< HEAD
+
 document.getElementById("toggleCollapse2").addEventListener("click", function() {
     var collapse = document.getElementById("collapse2");
     if (collapse.style.display === "none" || collapse.style.display === "") {
@@ -308,7 +308,7 @@ document.getElementById("toggleCollapse4").addEventListener("click", function() 
         collapse.style.display = "none";
     }
 });
-=======
+
 function tabelaRemedios() {
     var container = document.getElementById("conteudoRemedios"); // Div onde os botões serão inseridos
     document.innerHTML = ""; // Limpa antes de adicionar os novos botões
@@ -375,4 +375,4 @@ function dadosRemedios(remedio) {
         });
     });
 }
->>>>>>> 1448155bce85b39a5f19bd301bd7b5e248e42401
+1448155bce85b39a5f19bd301bd7b5e248e42401
