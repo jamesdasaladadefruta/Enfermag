@@ -69,7 +69,6 @@ var listaDeRemedios = [
         diluiçao: "Diluir em solução de cloreto de sódio 0.9% ou glicose5%",
         vias: "Intra venosa e  intra muscular",
         imcompatibilidade: "Soluçaos alcalinas,sulfatos,Medicamentos com efeitos ante alérgicos , medicamentos para doenças cardio vasculares Medicamentos do sistema nervoso",
-        nome: "",
         reaçoes: "Boca seca, sonolência, contipaçao, orticaria,",
     },
 
@@ -281,87 +280,73 @@ var listaDeRemedios = [
     },
 ];
 
-
-document.getElementById("openModal").addEventListener("click", function() {
-    document.getElementById("modal").style.display = "flex";
-});
-document.getElementById("closeModal").addEventListener("click", function() {
-    document.getElementById("modal").style.display = "none";
-});
-document.getElementById("toggleCollapse").addEventListener("click", function() {
-    var collapse = document.getElementById("collapse");
-    if (collapse.style.display === "none" || collapse.style.display === "") {
-        collapse.style.display = "block";
-    } else {
-        collapse.style.display = "none";
-    }
-});
-document.getElementById("toggleCollapse1").addEventListener("click", function() {
-    var collapse = document.getElementById("collapse1");
-    if (collapse.style.display === "none" || collapse.style.display === "") {
-        collapse.style.display = "block";
-    } else {
-        collapse.style.display = "none";
-    }
+document.addEventListener("DOMContentLoaded", function () {
+    tabelaRemedios(); // Inicializa os botões de remédios
 });
 
-document.getElementById("toggleCollapse2").addEventListener("click", function() {
-    var collapse = document.getElementById("collapse2");
-    if (collapse.style.display === "none" || collapse.style.display === "") {
-        collapse.style.display = "block";
-    } else {
-        collapse.style.display = "none";
-    }
-});
-document.getElementById("toggleCollapse3").addEventListener("click", function() {
-    var collapse = document.getElementById("collapse3");
-    if (collapse.style.display === "none" || collapse.style.display === "") {
-        collapse.style.display = "block";
-    } else {
-        collapse.style.display = "none";
-    }
-});
-document.getElementById("toggleCollapse4").addEventListener("click", function() {
-    var collapse = document.getElementById("collapse4");
-    if (collapse.style.display === "none" || collapse.style.display === "") {
-        collapse.style.display = "block";
-    } else {
-        collapse.style.display = "none";
-    }
-});
+function tabelaRemedios() {
+    var container = document.getElementById("conteudoRemedios"); // Div onde os botões serão inseridos
+    document.innerHTML = ""; // Limpa antes de adicionar os novos botões
 
-function dadosRemedios(){
-    var conteudoModalHTML = document.getElementById("conteudoModal")
-    listaDeRemedios.forEach(remedio =>{
-        conteudoModalHTML.innerHTML = `
-         <h1>${remedio.nome}</h1>
-                <button id="toggleCollapse">Indicações</button>
-                <div id="collapse" class="collapse">
-                    <p>${remedio.indicaçoes}</p>
-                </div>
+    listaDeRemedios.forEach((remedio, index) => {
+        let botao = document.createElement("button");
+        botao.textContent = remedio.nome;
+        botao.classList.add("openModal");
+        botao.dataset.index = index; // Armazena o índice do remédio
 
-                <button id="toggleCollapse1">Diluição</button>
-                <div id="collapse1" class="collapse">
-                    <p>${remedio.diluiçao}</p>
-                </div>
+        container.appendChild(botao);
+    });
 
-                <button id="toggleCollapse2">Vias ADM</button>
-                <div id="collapse2" class="collapse">
-                    <p>${remedio.vias}</p>
-                </div>
-                <button id="toggleCollapse3">Imcompatibilidade</button>
-                <div id="collapse3" class="collapse">
-                    <p>${remedio.imcompatibilidade}</p>
-                </div>
-                <button id="toggleCollapse4">Reações adversas</button>
-                <div id="collapse4" class="collapse">
-                    <p>${remedio.reaçoes}</p>
-                </div>
-                <button id="closeModal">Fechar</button>
-            </div>
-    `
-
-    })
-    
+    // Adiciona evento para todos os botões de abrir modal
+    document.querySelectorAll(".openModal").forEach(button => {
+        button.addEventListener("click", function () {
+            let index = this.dataset.index;
+            dadosRemedios(listaDeRemedios[index]);
+        });
+    });
 }
-dadosRemedios()
+tabelaRemedios()
+
+function dadosRemedios(remedio) {
+    document.head.querySelector("title").textContent = remedio.nome
+    var modal = document.getElementById("modal");
+    var conteudoModal = document.getElementById("conteudoModal");
+
+    conteudoModal.innerHTML = `
+        <h1>${remedio.nome}</h1>
+        <button class="toggleCollapse" data-target="collapse">Indicações</button>
+        <div id="collapse" class="collapse"><p>${remedio.indicaçoes}</p></div>
+
+        <button class="toggleCollapse" data-target="collapse1">Diluição</button>
+        <div id="collapse1" class="collapse"><p>${remedio.diluiçao}</p></div>
+        
+        <button class="toggleCollapse" data-target="collapse2">Vias ADM</button>
+        <div id="collapse2" class="collapse"><p>${remedio.vias}</p></div>
+
+        <button class="toggleCollapse" data-target="collapse3">Incompatibilidade</button>
+        <div id="collapse3" class="collapse"><p>${remedio.imcompatibilidade}</p></div>
+
+        <button class="toggleCollapse" data-target="collapse4">Reações adversas</button>
+        <div id="collapse4" class="collapse"><p>${remedio.reaçoes}</p></div>
+
+        <button id="closeModal">Fechar</button>
+    `;
+
+    modal.style.display = "flex";
+
+    // Adiciona evento de fechar modal
+    document.getElementById("closeModal").addEventListener("click", function () {
+        modal.style.display = "none";
+        document.head.querySelector("title").textContent = "Remedios";
+    });
+
+    // Adiciona eventos para os botões de collapse
+    document.querySelectorAll(".toggleCollapse").forEach(button => {
+        button.addEventListener("click", function () {
+            let target = document.getElementById(this.dataset.target);
+            if (target) {
+                target.style.display = target.style.display === "block" ? "none" : "block";
+            }
+        });
+    });
+}
