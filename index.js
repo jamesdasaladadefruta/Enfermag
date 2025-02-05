@@ -283,8 +283,8 @@ document.addEventListener("DOMContentLoaded", function () {
     tabelaRemedios(); // Inicializa os botões de remédios
 });
 
-<<<<<<< HEAD
-document.getElementById("toggleCollapse2").addEventListener("click", function() {
+
+document.getElementById("toggleCollapse2").addEventListener("click", function () {
     var collapse = document.getElementById("collapse2");
     if (collapse.style.display === "none" || collapse.style.display === "") {
         collapse.style.display = "block";
@@ -292,7 +292,7 @@ document.getElementById("toggleCollapse2").addEventListener("click", function() 
         collapse.style.display = "none";
     }
 });
-document.getElementById("toggleCollapse3").addEventListener("click", function() {
+document.getElementById("toggleCollapse3").addEventListener("click", function () {
     var collapse = document.getElementById("collapse3");
     if (collapse.style.display === "none" || collapse.style.display === "") {
         collapse.style.display = "block";
@@ -300,7 +300,7 @@ document.getElementById("toggleCollapse3").addEventListener("click", function() 
         collapse.style.display = "none";
     }
 });
-document.getElementById("toggleCollapse4").addEventListener("click", function() {
+document.getElementById("toggleCollapse4").addEventListener("click", function () {
     var collapse = document.getElementById("collapse4");
     if (collapse.style.display === "none" || collapse.style.display === "") {
         collapse.style.display = "block";
@@ -308,12 +308,13 @@ document.getElementById("toggleCollapse4").addEventListener("click", function() 
         collapse.style.display = "none";
     }
 });
-=======
-function tabelaRemedios() {
-    var container = document.getElementById("conteudoRemedios"); // Div onde os botões serão inseridos
-    document.innerHTML = ""; // Limpa antes de adicionar os novos botões
 
-    listaDeRemedios.forEach((remedio, index) => {
+function tabelaRemedios(lista = listaDeRemedios) {
+    var container = document.getElementById("conteudoRemedios"); // Div onde os botões serão inseridos
+    container.innerHTML = "" // Limpa antes de adicionar os novos botões
+    
+
+    lista.forEach((remedio, index) => {
         let botao = document.createElement("button");
         botao.textContent = remedio.nome;
         botao.classList.add("openModal");
@@ -326,7 +327,7 @@ function tabelaRemedios() {
     document.querySelectorAll(".openModal").forEach(button => {
         button.addEventListener("click", function () {
             let index = this.dataset.index;
-            dadosRemedios(listaDeRemedios[index]);
+            dadosRemedios(lista[index]);
         });
     });
 }
@@ -338,7 +339,10 @@ function dadosRemedios(remedio) {
     var conteudoModal = document.getElementById("conteudoModal");
 
     conteudoModal.innerHTML = `
-        <h1>${remedio.nome}</h1>
+        <div>
+            <button id="closeModal"><img src="./images/iconclose.png" class="close"></button>
+            <h1 class = "tituloCollapse">${remedio.nome}</h1>
+        </div>
         <button class="toggleCollapse" data-target="collapse">Indicações</button>
         <div id="collapse" class="collapse"><p>${remedio.indicaçoes}</p></div>
 
@@ -354,11 +358,16 @@ function dadosRemedios(remedio) {
         <button class="toggleCollapse" data-target="collapse4">Reações adversas</button>
         <div id="collapse4" class="collapse"><p>${remedio.reaçoes}</p></div>
 
-        <button id="closeModal">Fechar</button>
+       
     `;
 
     modal.style.display = "flex";
-
+    document.addEventListener("click", (ev) => {
+        if (ev.target.id == "modal") {
+            modal.style.display = "none";
+            document.head.querySelector("title").textContent = "Remedios";
+        }
+    })
     // Adiciona evento de fechar modal
     document.getElementById("closeModal").addEventListener("click", function () {
         modal.style.display = "none";
@@ -375,4 +384,11 @@ function dadosRemedios(remedio) {
         });
     });
 }
->>>>>>> 1448155bce85b39a5f19bd301bd7b5e248e42401
+function buscarRemedio(input){
+const listaTemporaria= listaDeRemedios.filter(remedio=>remedio.nome.toLowerCase().includes(input.value.toLowerCase()))
+tabelaRemedios(listaTemporaria)
+
+}
+
+
+
