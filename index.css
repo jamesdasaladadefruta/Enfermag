@@ -1,3 +1,8 @@
+.openModal {/*BOTÕES TELA INICIAL DE REMEDIOS*/
+    width: 60%;
+    padding: 10px;
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -9,11 +14,26 @@
     justify-content: center;
     align-items: center;
 }
-.conteudoModal{
+.toggleCollapse{
+    /*BOTÕES DO COLLAPSE*/
+    width: 100%;
+    padding: 10px;
+
+}
+#conteudoModal {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
 }
+
+#conteudoRemedios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
 .modal-content {
     background: white;
     padding: 20px;
@@ -23,6 +43,7 @@
     max-height: 80vh;
     overflow-y: auto;
 }
+
 .collapse {
     display: none;
     margin-top: 10px;
@@ -30,6 +51,7 @@
     background: #f1f1f1;
     border: 1px solid #ccc;
 }
-#closeModal{
+
+#closeModal {
     align-items: center;
 }
