@@ -285,6 +285,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.getElementById("toggleCollapse2").addEventListener("click", function () {
+
+document.getElementById("toggleCollapse2").addEventListener("click", function() {
+
     var collapse = document.getElementById("collapse2");
     if (collapse.style.display === "none" || collapse.style.display === "") {
         collapse.style.display = "block";
@@ -308,6 +311,12 @@ document.getElementById("toggleCollapse4").addEventListener("click", function ()
         collapse.style.display = "none";
     }
 });
+
+
+function tabelaRemedios() {
+    var container = document.getElementById("conteudoRemedios"); // Div onde os botões serão inseridos
+    document.innerHTML = ""; // Limpa antes de adicionar os novos botões
+
 
 function tabelaRemedios(lista = listaDeRemedios) {
     var container = document.getElementById("conteudoRemedios"); // Div onde os botões serão inseridos
@@ -384,11 +393,9 @@ function dadosRemedios(remedio) {
         });
     });
 }
+
 function buscarRemedio(input){
 const listaTemporaria= listaDeRemedios.filter(remedio=>remedio.nome.toLowerCase().includes(input.value.toLowerCase()))
 tabelaRemedios(listaTemporaria)
 
 }
-
-
-
