@@ -1,4 +1,3 @@
-
 var listaDeRemedios = [
     {
         nome: "Actilyse",
@@ -306,7 +305,7 @@ document.getElementById("toggleCollapse1").addEventListener("click", function() 
 });
 
 document.getElementById("toggleCollapse2").addEventListener("click", function() {
-    var collapse = document.getElementById("collapse");
+    var collapse = document.getElementById("collapse2");
     if (collapse.style.display === "none" || collapse.style.display === "") {
         collapse.style.display = "block";
     } else {
