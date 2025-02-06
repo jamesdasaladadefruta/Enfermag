@@ -2,13 +2,19 @@
     /*BOTÕES TELA INICIAL DE REMEDIOS*/
     width: 100%;
     padding: 10px;
-    background-color: hsl(180, 100%, 97%,0.9);
-    font-size: 15px;
+    background-color: hsl(180, 100%, 97%, 0.9);
+    font-size: 13px;
+    border: 2px rgb(17, 17, 17,0.6) solid;
+    border-radius: 10px;
+    cursor: pointer;
 }
-
-body{
+.openModal:hover{
+    background-color: hsla(180, 100%, 97%, 0);
+}
+body {
     background-color: #c9ffeb;
 }
+
 .modal {
     display: none;
     position: fixed;
@@ -49,10 +55,11 @@ body{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     position: relative;
     max-height: 80vh;
+    width: 80vh;
     overflow-y: auto;
 }
 
-.tituloCollapse{
+.tituloCollapse {
     margin: 0;
     position: relative;
     bottom: 35px;
@@ -65,7 +72,9 @@ body{
     background: #ffffff;
     border: 1px solid #ccc;
 }
-
+.collapse:hover{
+    background-color: rgb(236, 243, 243);
+}
 #closeModal {
     align-items: center;
     border: 0;
@@ -82,43 +91,47 @@ body{
     width: 45%;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #c9ffeb;
-    margin:0 ;
+    margin: 0;
 }
-header{
+
+header {
     width: 100%;
     height: 10%;
     background-color: #b5fabc;
     text-align: center;
 }
-.logoenfer{
+
+.logoenfer {
     padding: 8px;
     width: 85px;
-display: flex;
+    display: flex;
     justify-content: flex-start;
 }
-.titleenfer{
-margin: 0;
-padding: 0;
-position: absolute;
-top: 15px;
-left: 125px;
+
+.titleenfer {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 15px;
+    left: 125px;
 }
 
 .search-container {
     margin: 5px;
     position: relative;
-   
-    width: 300px;
+    width: 350px;
+    margin-bottom: 15px;
 }
 
 .search-container input {
     width: 100%;
-    padding: 10px 35px 10px 10px; /* Espaço para o ícone */
+    padding: 10px 35px 10px 10px;
+    /* Espaço para o ícone */
     border: 1px solid #ccc;
     border-radius: 20px;
     outline: none;
@@ -130,13 +143,14 @@ left: 125px;
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    width: 20px; /* Ajuste do tamanho do ícone */
+    width: 20px;
+    /* Ajuste do tamanho do ícone */
     height: 20px;
     cursor: pointer;
     opacity: 0.6;
 }
 
 .search-container .search-icon:hover {
-    opacity: 1; /* Ícone fica mais visível ao passar o mouse */
+    opacity: 1;
+    /* Ícone fica mais visível ao passar o mouse */
 }
-
