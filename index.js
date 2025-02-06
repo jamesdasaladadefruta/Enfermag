@@ -365,4 +365,3 @@ const listaTemporaria= listaDeRemedios.filter(remedio=>remedio.nome.toLowerCase(
 tabelaRemedios(listaTemporaria)
 
 }
-
