@@ -1,19 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Remedios</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+
 </head>
+
 <body>
+    <header>
+        <div>
+            <img class="logoenfer" src="./images/logo.png" alt="">
+            <h1 class="titleenfer">MedicCerto</h1>
+        </div>
+    </header>
+    <div class="search-container">
+        <input type="text" id="search" oninput="buscarRemedio(this)" placeholder="Buscar Remedio">
+        <img class="search-icon" src="./images/lupa 1.png" alt="">
+    </div>
+    <div id="conteudoRemedios">
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div id="conteudoModal">
 
 
-
-
-    
+            </div>
+        </div>
+    </div>
     <script src="index.js"></script>
 </body>
+
 </html>
-
-

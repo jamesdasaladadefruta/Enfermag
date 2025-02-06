@@ -1,4 +1,3 @@
-
 var listaDeRemedios = [
     {
         nome: "Actilyse",
@@ -69,7 +68,6 @@ var listaDeRemedios = [
         diluiçao: "Diluir em solução de cloreto de sódio 0.9% ou glicose5%",
         vias: "Intra venosa e  intra muscular",
         imcompatibilidade: "Soluçaos alcalinas,sulfatos,Medicamentos com efeitos ante alérgicos , medicamentos para doenças cardio vasculares Medicamentos do sistema nervoso",
-        nome: "",
         reaçoes: "Boca seca, sonolência, contipaçao, orticaria,",
     },
 
@@ -256,7 +254,7 @@ var listaDeRemedios = [
     {
         nome: "Nitronicerina",
         indicaçoes: "Este medicamento é indicado para o tratamento de hipertensão perioperatória para controle de insuficiência cardíaca congestiva, no ajuste do infarto agudo do miocárdio, para tratamento de angina pectoris.",
-        diluiçao:"Deve ser diluído em glicose (5%) ou cloreto de sódio (0,9%) antes da realização da infusão. O equipo usado para infusão pode influenciar na quantidade de nitroglicerina administrada ao paciente e requer atenção para a resposta clínica.",
+        diluiçao: "Deve ser diluído em glicose (5%) ou cloreto de sódio (0,9%) antes da realização da infusão. O equipo usado para infusão pode influenciar na quantidade de nitroglicerina administrada ao paciente e requer atenção para a resposta clínica.",
         vias: "Nitroglicerina é destinado apenas para uso intravenoso. Não administrar por injeção intravenosa direta.",
         imcompatibilidade: "Alteplase: Nitroglicerina pode reduzir sua concentração sérica.Diazóxido: Pode aumentar o efeito hipotensor dos anti-hipertensivos. Metilfenidato: Pode reduzir o efeito hipotensor dos anti-hipertensivos. Inibidores de Fosfodiesterase-5: Podem intensificar o efeito vasodilatador dos nitratos. Análogos da Prostaciclina: Podem aumentar o efeito hipotensor dos anti-hipertensivos. Rituximabe: Anti-hipertensivos podem intensificar seu efeito hipotensor. Rosiglitazona: Nitratos podem aumentar o risco de isquemia miocárdica. Álcool: Pode intensificar o efeito hipotensor da nitroglicerina. Fitoterápicos: Alguns fitoterápicos com efeito hipotensor (ex. gengibre, ginseng, cola, alcaçuz, quinino) podem potencializar o efeito dos anti-hipertensivos.",
         reaçoes: "Vertigem, cefaleia, sincope, hipotensão, hipertensão rebote",
@@ -281,4 +279,94 @@ var listaDeRemedios = [
     },
 ];
 
-montarTabela()
+
+
+function tabelaRemedios(lista = listaDeRemedios) {
+    var container = document.getElementById("conteudoRemedios"); // Div onde os botões serão inseridos
+    container.innerHTML = "" // Limpa antes de adicionar os novos botões
+
+
+    lista.forEach((remedio, index) => {
+        let botao = document.createElement("button");
+        botao.textContent = remedio.nome.toUpperCase();
+        botao.classList.add("openModal");
+        botao.dataset.index = index; // Armazena o índice do remédio
+
+        container.appendChild(botao);
+    });
+
+    // Adiciona evento para todos os botões de abrir modal
+    document.querySelectorAll(".openModal").forEach(button => {
+        button.addEventListener("click", function () {
+            let index = this.dataset.index;
+            dadosRemedios(lista[index]);
+        });
+    });
+}
+tabelaRemedios()
+
+function dadosRemedios(remedio) {
+    document.head.querySelector("title").textContent = remedio.nome
+    var modal = document.getElementById("modal");
+    var conteudoModal = document.getElementById("conteudoModal");
+
+    conteudoModal.innerHTML = `
+<div>
+    <button id="closeModal"><img src="./images/iconclose.png" class="close"></button>
+    <h1 class = "tituloCollapse">${remedio.nome.toUpperCase()}</h1>
+</div>
+<button class="toggleCollapse" data-target="collapse">Indicações</button>
+<div id="collapse" class="collapse"><p>${remedio.indicaçoes}</p></div>
+
+<button class="toggleCollapse" data-target="collapse1">Diluição</button>
+<div id="collapse1" class="collapse"><p>${remedio.diluiçao}</p></div>
+
+<button class="toggleCollapse" data-target="collapse2">Vias ADM</button>
+<div id="collapse2" class="collapse"><p>${remedio.vias}</p></div>
+
+<button class="toggleCollapse" data-target="collapse3">Incompatibilidade</button>
+<div id="collapse3" class="collapse"><p>${remedio.imcompatibilidade}</p></div>
+
+<button class="toggleCollapse" data-target="collapse4">Reações adversas</button>
+<div id="collapse4" class="collapse"><p>${remedio.reaçoes}</p></div>
+
+
+`;
+
+modal.style.display = "flex";
+document.addEventListener("click", (ev) => {
+if (ev.target.id == "modal") {
+    modal.style.display = "none";
+            document.head.querySelector("title").textContent = "Remedios";
+        }
+    })
+    // Adiciona evento de fechar modal
+    document.getElementById("closeModal").addEventListener("click", function () {
+        modal.style.display = "none";
+        document.head.querySelector("title").textContent = "Remedios";
+        limparBusca()
+        tabelaRemedios()
+    });
+
+    // Adiciona eventos para os botões de collapse
+    document.querySelectorAll(".toggleCollapse").forEach(button => {
+        limparBusca()
+        tabelaRemedios()
+        button.addEventListener("click", function () {
+            let target = document.getElementById(this.dataset.target);
+            if (target) {
+                target.style.display = target.style.display === "block" ? "none" : "block";
+            }
+        });
+    });
+}
+
+function buscarRemedio(input) {
+    const listaTemporaria = listaDeRemedios.filter(remedio => remedio.nome.toLowerCase().includes(input.value.toLowerCase()))
+    tabelaRemedios(listaTemporaria)
+
+}
+function limparBusca() {
+    var inputHTML = document.getElementById("search")
+    inputHTML.value = ""
+}
