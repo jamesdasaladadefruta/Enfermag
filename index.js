@@ -279,88 +279,94 @@ var listaDeRemedios = [
     },
 ];
 
-document.addEventListener("DOMContentLoaded", function () {
-    tabelaRemedios(); // Inicializa os botões de remédios
-});
-
-        function tabelaRemedios(lista = listaDeRemedios) {
-            var container = document.getElementById("conteudoRemedios"); // Div onde os botões serão inseridos
-            container.innerHTML = "" // Limpa antes de adicionar os novos botões
 
 
-            lista.forEach((remedio, index) => {
-                let botao = document.createElement("button");
-                botao.textContent = remedio.nome;
-                botao.classList.add("openModal");
-                botao.dataset.index = index; // Armazena o índice do remédio
+function tabelaRemedios(lista = listaDeRemedios) {
+    var container = document.getElementById("conteudoRemedios"); // Div onde os botões serão inseridos
+    container.innerHTML = "" // Limpa antes de adicionar os novos botões
 
-                container.appendChild(botao);
-            });
 
-            // Adiciona evento para todos os botões de abrir modal
-            document.querySelectorAll(".openModal").forEach(button => {
-                button.addEventListener("click", function () {
-                    let index = this.dataset.index;
-                    dadosRemedios(lista[index]);
-                });
-            });
+    lista.forEach((remedio, index) => {
+        let botao = document.createElement("button");
+        botao.textContent = remedio.nome.toUpperCase();
+        botao.classList.add("openModal");
+        botao.dataset.index = index; // Armazena o índice do remédio
+
+        container.appendChild(botao);
+    });
+
+    // Adiciona evento para todos os botões de abrir modal
+    document.querySelectorAll(".openModal").forEach(button => {
+        button.addEventListener("click", function () {
+            let index = this.dataset.index;
+            dadosRemedios(lista[index]);
+        });
+    });
+}
+tabelaRemedios()
+
+function dadosRemedios(remedio) {
+    document.head.querySelector("title").textContent = remedio.nome
+    var modal = document.getElementById("modal");
+    var conteudoModal = document.getElementById("conteudoModal");
+
+    conteudoModal.innerHTML = `
+<div>
+    <button id="closeModal"><img src="./images/iconclose.png" class="close"></button>
+    <h1 class = "tituloCollapse">${remedio.nome.toUpperCase()}</h1>
+</div>
+<button class="toggleCollapse" data-target="collapse">Indicações</button>
+<div id="collapse" class="collapse"><p>${remedio.indicaçoes}</p></div>
+
+<button class="toggleCollapse" data-target="collapse1">Diluição</button>
+<div id="collapse1" class="collapse"><p>${remedio.diluiçao}</p></div>
+
+<button class="toggleCollapse" data-target="collapse2">Vias ADM</button>
+<div id="collapse2" class="collapse"><p>${remedio.vias}</p></div>
+
+<button class="toggleCollapse" data-target="collapse3">Incompatibilidade</button>
+<div id="collapse3" class="collapse"><p>${remedio.imcompatibilidade}</p></div>
+
+<button class="toggleCollapse" data-target="collapse4">Reações adversas</button>
+<div id="collapse4" class="collapse"><p>${remedio.reaçoes}</p></div>
+
+
+`;
+
+modal.style.display = "flex";
+document.addEventListener("click", (ev) => {
+if (ev.target.id == "modal") {
+    modal.style.display = "none";
+            document.head.querySelector("title").textContent = "Remedios";
         }
+    })
+    // Adiciona evento de fechar modal
+    document.getElementById("closeModal").addEventListener("click", function () {
+        modal.style.display = "none";
+        document.head.querySelector("title").textContent = "Remedios";
+        limparBusca()
         tabelaRemedios()
+    });
 
-        function dadosRemedios(remedio) {
-            document.head.querySelector("title").textContent = remedio.nome
-            var modal = document.getElementById("modal");
-            var conteudoModal = document.getElementById("conteudoModal");
+    // Adiciona eventos para os botões de collapse
+    document.querySelectorAll(".toggleCollapse").forEach(button => {
+        limparBusca()
+        tabelaRemedios()
+        button.addEventListener("click", function () {
+            let target = document.getElementById(this.dataset.target);
+            if (target) {
+                target.style.display = target.style.display === "block" ? "none" : "block";
+            }
+        });
+    });
+}
 
-            conteudoModal.innerHTML = `
-        <div>
-            <button id="closeModal"><img src="./images/iconclose.png" class="close"></button>
-            <h1 class = "tituloCollapse">${remedio.nome}</h1>
-        </div>
-        <button class="toggleCollapse" data-target="collapse">Indicações</button>
-        <div id="collapse" class="collapse"><p>${remedio.indicaçoes}</p></div>
+function buscarRemedio(input) {
+    const listaTemporaria = listaDeRemedios.filter(remedio => remedio.nome.toLowerCase().includes(input.value.toLowerCase()))
+    tabelaRemedios(listaTemporaria)
 
-        <button class="toggleCollapse" data-target="collapse1">Diluição</button>
-        <div id="collapse1" class="collapse"><p>${remedio.diluiçao}</p></div>
-        
-        <button class="toggleCollapse" data-target="collapse2">Vias ADM</button>
-        <div id="collapse2" class="collapse"><p>${remedio.vias}</p></div>
-
-        <button class="toggleCollapse" data-target="collapse3">Incompatibilidade</button>
-        <div id="collapse3" class="collapse"><p>${remedio.imcompatibilidade}</p></div>
-
-        <button class="toggleCollapse" data-target="collapse4">Reações adversas</button>
-        <div id="collapse4" class="collapse"><p>${remedio.reaçoes}</p></div>
-
-       
-    `;
-
-            modal.style.display = "flex";
-            document.addEventListener("click", (ev) => {
-                if (ev.target.id == "modal") {
-                    modal.style.display = "none";
-                    document.head.querySelector("title").textContent = "Remedios";
-                }
-            })
-            // Adiciona evento de fechar modal
-            document.getElementById("closeModal").addEventListener("click", function () {
-                modal.style.display = "none";
-                document.head.querySelector("title").textContent = "Remedios";
-            });
-
-            // Adiciona eventos para os botões de collapse
-            document.querySelectorAll(".toggleCollapse").forEach(button => {
-                button.addEventListener("click", function () {
-                    let target = document.getElementById(this.dataset.target);
-                    if (target) {
-                        target.style.display = target.style.display === "block" ? "none" : "block";
-                    }
-                });
-            });
-        }
-
-        function buscarRemedio(input) {
-            const listaTemporaria = listaDeRemedios.filter(remedio => remedio.nome.toLowerCase().includes(input.value.toLowerCase()))
-            tabelaRemedios(listaTemporaria)
-
-        }
+}
+function limparBusca() {
+    var inputHTML = document.getElementById("search")
+    inputHTML.value = ""
+}
